@@ -1,0 +1,6 @@
+create_table("logs") {
+    t.Column("log_id", "uuid", {"primary": true})
+    t.Column("level", "string", {"size": 20})
+    t.Column("message", "string", {"size": 100})
+    t.Column("file", "text", {})
+}

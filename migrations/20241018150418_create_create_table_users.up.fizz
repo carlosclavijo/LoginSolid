@@ -1,0 +1,5 @@
+create_table("users") {
+  t.Column("user_id", "uuid", {"primary": true})
+  t.Column("username", "string", {"size": 50})
+  t.Column("password", "string", {"size": 200})
+}

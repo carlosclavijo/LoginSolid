@@ -1,0 +1,6 @@
+add_index("users", "username",  {"unique": true})
+
+sql("alter table only users alter column user_id set default gen_random_uuid()")
+sql("alter table only users alter column created_at set default NOW()")
+sql("alter table only users alter column updated_at set default NOW()")
+sql("alter table users add constraint username_check check(length(username) >= 5)")

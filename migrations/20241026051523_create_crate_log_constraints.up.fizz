@@ -1,0 +1,3 @@
+sql("alter table only logs alter column log_id set default gen_random_uuid()")
+sql("alter table only logs alter column created_at set default NOW()")
+sql("alter table only logs alter column updated_at set default NOW()")
